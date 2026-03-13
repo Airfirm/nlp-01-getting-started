@@ -1,5 +1,5 @@
 """
-web_words_case.py - Project script (example).
+web_words_femi.py - Project script (example).
 
 Purpose
 
