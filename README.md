@@ -3,6 +3,42 @@
 [![Python 3.14+](https://img.shields.io/badge/python-3.14%2B-blue?logo=python)](#)
 [![MIT](https://img.shields.io/badge/license-see%20LICENSE-yellow.svg)](./LICENSE)
 
+## Enhancement: Phrase Analysis with Bigrams
+
+The original script performed a **basic word frequency analysis** by extracting visible text from a web page, cleaning the text, counting word occurrences, and visualizing the results using a bar chart and word cloud.
+
+To extend the analysis, the script was modified to generate **bigrams (two-word phrases)** from the cleaned text. This enhancement provides deeper insight into the content because phrases often reveal **context and topics more clearly than individual words**.
+
+For example, instead of seeing the words:
+
+- `natural`
+- `language`
+- `processing`
+
+separately, the bigram analysis identifies meaningful phrases such as:
+
+- `natural language`
+- `language processing`
+- `machine learning`
+
+### Implementation
+
+The new code creates bigrams by pairing adjacent words in the cleaned text list. The frequency of these word pairs is then calculated and visualized using a bar chart.
+
+Example implementation:
+
+```python
+from collections import Counter
+
+bigrams: list[tuple[str, str]] = list(
+    zip(clean_words, clean_words[1:], strict=False)
+)
+
+bigram_counts = Counter(bigrams)
+
+top_bigrams = bigram_counts.most_common(10)
+
+
 > Professional Python project for Web Mining and Applied NLP.
 
 Web Mining and Applied NLP focus on retrieving, processing, and analyzing text from the web and other digital sources.

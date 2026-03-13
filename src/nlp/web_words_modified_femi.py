@@ -12,8 +12,7 @@ Analytical Questions
 - What topic does the vocabulary suggest?
 - What noise appears from navigation or markup?
 - What preprocessing steps might improve results?
-- What are the most frequent words on the page?
-- Shows a word cloud of the most common words.
+- What are the most frequent two-words phrases on the page?
 
 Notes
 
